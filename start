@@ -1,0 +1,2 @@
+#!/bin/sh
+python manage.py runserver 109.74.198.181:8000

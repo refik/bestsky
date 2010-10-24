@@ -1,5 +1,5 @@
 from django.conf.urls.defaults import *
-from bestsky.settings import MEDIA_ROOT
+import bestsky.settings as settings
 
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
@@ -18,6 +18,6 @@ urlpatterns = patterns('',
 
 if settings.DEBUG:
   urlpatterns += patterns('',
-    (r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
+    (r'^site_media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
 )
 
